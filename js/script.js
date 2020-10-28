@@ -2,51 +2,51 @@ document.addEventListener('DOMContentLoaded', () => {});
 const cardArray = [
 	{
 		name: 'homer',
-		img: '../images/homer.png'
+		img: '/images/homer.png'
 	},
 	{
 		name: 'homer',
-		img: '../images/homer.png'
+		img: '/images/homer.png'
 	},
 	{
 		name: 'marge',
-		img: '../images/marge.png'
+		img: '/images/marge.png'
 	},
 	{
 		name: 'marge',
-		img: '../images/marge.png'
+		img: '/images/marge.png'
 	},
 	{
 		name: 'maggie',
-		img: '../images/maggie.png'
+		img: '/images/maggie.png'
 	},
 	{
 		name: 'maggie',
-		img: '../images/maggie.png'
+		img: '/images/maggie.png'
 	},
 	{
 		name: 'lisa',
-		img: '../images/lisa.png'
+		img: '/images/lisa.png'
 	},
 	{
 		name: 'lisa',
-		img: '../images/lisa.png'
+		img: '/images/lisa.png'
 	},
 	{
 		name: 'bart',
-		img: '../images/bart.png'
+		img: '/images/bart.png'
 	},
 	{
 		name: 'bart',
-		img: '../images/bart.png'
+		img: '/images/bart.png'
 	},
 	{
 		name: 'pets',
-		img: '../images/pets.png'
+		img: '/images/pets.png'
 	},
 	{
 		name: 'pets',
-		img: '../images/pets.png'
+		img: '/images/pets.png'
 	}
 ];
 
@@ -61,7 +61,7 @@ var cardsWon = [];
 function createBoard(){
      for (let i = 0; i < cardArray.length; i++) {
           let card = document.createElement('img');
-          card.setAttribute('src', '../images/happy.png');
+          card.setAttribute('src', '/images/happy.png');
           card.setAttribute('data-id', i);
           card.addEventListener('click', flipCard);
           grid.appendChild(card);          
@@ -74,12 +74,12 @@ function checkForMatch(){
      const optionTwoId = cardsChosenId[1];
      if(cardsChosen[0] === cardsChosen[1]){
           alert('You found a match');
-          cards[optionOneId].setAttribute('src', '../images/white.png');
-          cards[optionTwoId].setAttribute('src', '../images/white.png');
+          cards[optionOneId].setAttribute('src', '/images/white.png');
+          cards[optionTwoId].setAttribute('src', '/images/white.png');
           cardsWon.push(cardsChosen);
      }else{
-          cards[optionOneId].setAttribute('src', '../images/happy.png');
-          cards[optionTwoId].setAttribute('src', '../images/happy.png');
+          cards[optionOneId].setAttribute('src', '/images/happy.png');
+          cards[optionTwoId].setAttribute('src', '/images/happy.png');
           alert('Sorry, try again');
      }
      cardsChosen = [];
